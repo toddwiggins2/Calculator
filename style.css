@@ -43,6 +43,11 @@ button {
 
 }
 
+.buttons-all {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;}
+
 .btn-row-four {
   padding: 0.2em;
   display: flex;
@@ -57,7 +62,7 @@ button {
   background-color: orange;
 }
 
-.btn {
+.btn1 {
   width: auto;
   height: 100%;
   padding: 0.2em;
@@ -66,16 +71,16 @@ button {
 
 }
 
-.btn:active {
+.btn1:active {
     transform: translateY(2px);
   }
 
-.btn:last-child {
+.btn1:last-child {
   color: black;
   background-color: orange;
 }
 
-.btn-row-four:nth-child(6) {
+.btn-row-four:nth-child(5) {
   padding: 0.2em;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
@@ -83,9 +88,6 @@ button {
 }
 
 @media only screen and (max-width: 610px) {
-  .main-calculator {
-    /* background-color: red; */
-  }
   .main-container {
     padding: 0;
   }
