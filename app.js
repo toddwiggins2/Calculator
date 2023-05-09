@@ -5,7 +5,6 @@ let previousOperator;
 const screen = document.querySelector(".screen");
 
 function buttonClicked(value) {
-  console.log(value);
   if (isNaN(value)) {
     handleSymbol(value);
   } else {
@@ -45,9 +44,8 @@ function handleSymbol(symbol) {
   }
 }
 
-function handleMath(symbol) {
-  console.log("handleMath called");
 
+function handleMath(symbol) {
   if (buffer === "0") {
     return;
   }
@@ -75,7 +73,6 @@ function flushOperation(intBuffer) {
 }
 
 function handleNumber(numberString) {
-  console.log("handlenumber called");
   if (buffer === "0") {
     buffer = numberString;
   } else {
