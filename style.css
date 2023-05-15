@@ -2,7 +2,7 @@ body {
   /* display: grid; */
   /* justify-content: center; */
   background: linear-gradient(to bottom right, #22223b, #8c7d89);
-  font-family: fantasy;
+  font-family: Poppins;
   /* min-height: 100vh; */
 }
 
@@ -33,6 +33,7 @@ button {
 }
 
 .screen {
+  text-align: right;
   background-color: white;
   border: none;
   border-radius: 8px;
@@ -40,13 +41,13 @@ button {
   margin: 0.3em 0.1em;
   background-color: rgb(172, 172, 172);
   font-size: 4rem;
-
 }
 
 .buttons-all {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;}
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
 .btn-row-four {
   padding: 0.2em;
@@ -63,17 +64,17 @@ button {
 }
 
 .btn1 {
+  color: black;
   width: auto;
   height: 100%;
   padding: 0.2em;
   background-color: #4d4c4d;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .btn1:active {
-    transform: translateY(2px);
-  }
+  transform: translateY(2px);
+}
 
 .btn1:last-child {
   color: black;

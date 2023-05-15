@@ -19,11 +19,15 @@ function handleSymbol(symbol) {
       buffer = "0";
       total = 0;
       break;
+    case ".":
+      buffer += `.`;
+      break;
     case "=":
       if (previousOperator === null) {
         return;
       }
-      flushOperation(parseInt(buffer));
+      flushOperation(parseFloat(buffer));
+      // flushOperation(buffer);
       previousOperator = null;
       buffer = total;
       total = 0;
@@ -44,23 +48,26 @@ function handleSymbol(symbol) {
   }
 }
 
-
 function handleMath(symbol) {
   if (buffer === "0") {
     return;
   }
-  const intBuffer = parseInt(buffer);
+
+  const intBuffer = parseFloat(buffer);
 
   if (total === 0) {
     total = intBuffer;
   } else {
     flushOperation(intBuffer);
   }
+
   previousOperator = symbol;
   buffer = "0";
 }
 
 function flushOperation(intBuffer) {
+  console.log(intBuffer);
+  console.log(total);
   if (previousOperator === "+") {
     total += intBuffer;
   } else if (previousOperator === "-") {
