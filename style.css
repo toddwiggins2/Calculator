@@ -34,6 +34,10 @@ button {
 
 .screen {
   text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
   background-color: white;
   border: none;
   border-radius: 8px;
@@ -88,7 +92,7 @@ button {
   justify-content: space-evenly;
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 1050px) {
   .main-container {
     padding: 0;
   }
