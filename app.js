@@ -19,6 +19,16 @@ function handleSymbol(symbol) {
       buffer = "0";
       total = 0;
       break;
+    case "+/-":
+      if (buffer.charAt(0) != "-") {
+        buffer = `-` + buffer;
+        console.log(buffer);
+      } else if (buffer.charAt(0) == "-") {
+        buffer = buffer.slice(1);
+        console.log(`second case ${buffer}`);
+      }
+
+      break;
     case ".":
       buffer += `.`;
       break;
